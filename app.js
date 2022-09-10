@@ -1,82 +1,67 @@
 const express = require("express");
 const nodeMailer = require("nodemailer");
 const cors = require("cors");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
+//Models
+const Household = require("./models/householdModel");
+
+//Controllers
+const householdsController = require("./controllers/householdControllers");
+const authController = require("./controllers/authController");
 
 const app = express();
 
-// app.use(
-//   cors({
-//     origin: "https://gray-moss-0cc4cdb1e.azurestaticapps.net",
-//   })
-// );
-
 app.use(express.json());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
-let transporter = nodeMailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "bethelmobilecloset@gmail.com",
-    pass: "jeanette606",
-  },
-});
+// DOTENV
+dotenv.config({ path: "./config.env" });
+
+// CONNECTION TO DB
+const DB =
+  "mongodb+srv://jacmar:r3NCSEPqOwy3diU9@cluster0.y60tk.mongodb.net/mobile?retryWrites=true&w=majority";
+
+mongoose.connect(DB).then(() => console.log("DB connection successful!"));
 
 app.get("/", (req, res) => {
+  //res.redirect("https://www.jacobmartinworld.com");
   res.writeHead(200, { "Content-type": "text/html" });
   res.end(`
   <html>
-    <body>Endpoint is working, this is from the thing, changing to prove it changed</body>
+    <body>let's try again</body>
   </html>`);
 });
 
-app.post("/processrequest", (req, res) => {
-  const familyStuff = req.body[0];
-  console.log("Family Stuff " + familyStuff);
+// household routes
+app.get(
+  "/api/allHouseholds",
+  authController.protect,
+  householdsController.getHouseholds
+);
+app.post("/api/processrequest", householdsController.createHousehold);
+app.patch(
+  "/api/updatehousehold/:id",
+  authController.protect,
+  householdsController.patchHousehold
+);
+app.delete(
+  "/api/deletehousehold/:id",
+  authController.protect,
+  householdsController.deleteHousehold
+);
 
-  const people = req.body[1];
-  console.log("People " + people[0]);
+// Auth Routes
+app.post("/api/newuser", authController.protect, authController.newUser);
+app.post("/api/login", authController.login);
+app.post("/api/verify", authController.checkToken);
 
-  console.log("Hat " + people[0].hatCoatGloves);
-  console.log("Hat " + people[0].hatCoatGloves[0]);
-
-  people.map((n) => {
-    if (n.sex === "male") {
-      n.pantsFinal = `${n.pantsSize.waist}, ${n.pantsSize.inseamLength}`;
-    } else {
-      n.pantsFinal = n.pantsSize;
-    }
-  });
-
-  const familyString = `<br/><h3>Family Name: ${familyStuff[0]}<br/><h3>Street Address: ${familyStuff[1]}<br/><h3>Zip Code: ${familyStuff[2]}<br/>Phone Number: ${familyStuff[3]}<br/><h3>Country Of Origin: ${familyStuff[4]}<br/><h3>Days Available: ${familyStuff[5]}`;
-  let content = people.map(
-    (n, index) =>
-      "<br/>" +
-      `<h3>Person number ${index + 1}:<br/>` +
-      `Child or Adult: ${n.ca} FirstName: ${n.firstName} Age: ${n.age} HeightFeet: ${n.heightFeet} HeightInches: ${n.heightInches} Sex: ${n.sex} ShirtSize: ${n.shirtSize} PantsSize: ${n.pantsFinal} ShoeSize: ${n.shoeSize} BraSize: ${n.braSize} HatCoatGloves: ${n.hatCoatGloves} AnythingElse: ${n.anythingElse}`
-  );
-
-  const totalContent = familyString + content;
-
-  let sendResult = transporter.sendMail(
-    {
-      from: "bethelmobilecloset@gmail.com",
-      to: "bethelmobilecloset@gmail.com",
-      subject: `${familyStuff[0]} Mobile Closet Input Form`,
-      html: `<h1>Hi, here is the list: ${totalContent}`,
-    },
-    (err, data) => {
-      if (err) {
-        console.log(`Error Occurs: ${err}`);
-      } else {
-        console.log("Email sent");
-      }
-    }
-  );
-
-  res.writeHead(200, { "Content-type": "text/" });
-  res.end("Done");
-});
-
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3333;
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
