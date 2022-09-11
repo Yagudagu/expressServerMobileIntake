@@ -1,0 +1,44 @@
+/* #days-container {
+  display: contents;
+} */
+
+.individual-days-container {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.individual-days-container * {
+  margin: 0.2rem 0.5rem;
+}
+
+.individual-days-container select {
+  border-radius: 0.5rem;
+  background-color: white;
+  height: 100%;
+}
+
+.days-box * {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.with_days_checked {
+  display: flex;
+  align-items: center;
+}
+
+#time-thingy-container {
+  display: flex;
+}
+
+@media screen and (max-width: 720px) {
+  .individual-days-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* #time-thingy-container {
+    display: flex;
+  } */
+}

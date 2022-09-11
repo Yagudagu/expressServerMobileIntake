@@ -1,0 +1,46 @@
+.clothes-icons {
+  height: 4rem;
+  width: auto;
+}
+
+.clothes-container {
+  display: flex;
+}
+
+.clothes-container input {
+  width: 20rem;
+}
+
+.hat-coat-gloves-container input {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.7rem;
+}
+
+.sections {
+  margin-bottom: 1rem;
+}
+
+#anything-else {
+  margin: 1rem 20%;
+  width: 60%;
+  background-color: white;
+}
+
+#pants-size-child,
+#shirt-size-child {
+  width: 70%;
+}
+
+.dont-need-box {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+/* @media (max-width: 400px) {
+  .align-vert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+} */

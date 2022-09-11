@@ -1,0 +1,39 @@
+.btn-orange {
+  background-color: rgb(187, 107, 16);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin: 0.5rem 0;
+  padding: 20px 48px;
+  border-radius: 30px;
+  width: 14rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-orange:hover {
+  background-color: rgba(187, 107, 16, 0.377);
+}
+
+.close-btn {
+  background-color: rgb(187, 107, 16);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin: 0.5rem 0;
+  padding: 20px 48px;
+  border-radius: 30px;
+  width: 14rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: rgba(187, 107, 16, 0.377);
+}
+
+/* @media (max-width: 450px) {
+  .close-btn {
+    margin-bottom: 2rem;
+  }
+} */

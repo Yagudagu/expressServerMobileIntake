@@ -1,0 +1,155 @@
+@import "./BtnStuff.css";
+@import "./Popouts.css";
+@import "./CssInNeedOfHome.css";
+@import "./Days.css";
+@import "./Footer.css";
+
+@import "./Admin.css";
+@import "./AdminLogin.css";
+@import "./Toggle.css";
+
+:root {
+  --maxWidth: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7ef;
+}
+
+.app {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: rgb(108, 201, 147);
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  padding: 0.3rem 0.6rem;
+  color: rgb(187, 107, 16);
+}
+
+h3 {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+p {
+  font-size: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+a {
+  color: rgb(187, 107, 16);
+}
+
+a:hover {
+  color: rgba(187, 107, 16, 0.377);
+}
+
+input {
+  text-align: center;
+  border-color: white;
+  background-color: white;
+  font-size: 1.6rem;
+}
+
+#people-container {
+  display: flex;
+}
+
+.people-container-child {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.btn {
+  background-color: rgb(108, 201, 147);
+  font-size: 1.5rem;
+  color: var(--white);
+  margin: 0.3rem 0;
+  padding: 16px 36px;
+  border-radius: 30px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: darkgreen;
+}
+
+#remove-btn {
+  color: rgb(187, 107, 16);
+  cursor: pointer;
+}
+
+#remove-btn:hover {
+  color: rgba(187, 107, 16, 0.377);
+}
+
+#languages-container {
+  display: flex;
+  border-radius: 5px;
+  border: 3px solid rgb(108, 201, 147);
+  background-color: rgb(108, 201, 147);
+  padding: 0;
+  margin: 0 5% 0 80%;
+  float: right;
+}
+
+.languages-btn {
+  border: 3px solid rgb(108, 201, 147);
+  border-radius: 10px;
+  padding: 0.2rem 0.4rem;
+  margin: 0;
+  background-color: rgb(187, 107, 16);
+}
+
+.languages-btn:hover {
+  background-color: rgba(187, 107, 16, 0.377);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  /* .input-container {
+    display: inline-block;
+    margin: 0.5rem 20%;
+  } */
+
+  input[type="text"] {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 350px) {
+  input[type="text"] {
+    width: 12rem;
+  }
+}
