@@ -63,6 +63,12 @@ exports.login = async (req, res, next) => {
   // 3. If everything ok, send JWT
   const token = signToken(user._id);
 
+  res.cookie("jwt", token, {
+    expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+    //secure: true,
+    httpOnly: true,
+  });
+
   res.status(200).json({
     status: "success",
     token,
@@ -83,6 +89,10 @@ exports.checkToken = async (req, res) => {
 
 exports.protect = async (req, res, next) => {
   try {
+    console.log(
+      "---------------------------------req info------------------------------"
+    );
+    console.log(req);
     // Verify token
     const decoded = await decodeToken(req.headers.authorization);
 
