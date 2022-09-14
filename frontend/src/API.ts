@@ -4,7 +4,7 @@ import cookies from "js-cookie";
 
 //const rootUrl = "http://127.0.0.1:3333";
 //const rootUrl = "http://127.0.0.1:7071";
-const rootUrl = "https://jacobmongo.azurewebsites.net";
+const rootUrl = "https://158.101.21.143:3333";
 const authKeyHouse = "EFl/qjWJ48nnbZrtrvQPy0n2ZVl8HaxwrL5a1zzCMY5On301PiAHzA==";
 const authKeyAuth = "Pqma5ozI2SMyS/8pJA6754Fq7aM9N5j00g9TIiv2EU52QTmASuO7gA==";
 

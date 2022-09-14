@@ -7,7 +7,7 @@ import API from "./API";
 interface Props {}
 
 const AdminLogin: React.FC<Props> = (props) => {
-  const [loggedIn, setLoggedIn] = useState<boolean>(true);
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
   const handleLogin = async (e: any) => {
     e.preventDefault();
