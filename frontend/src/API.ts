@@ -37,7 +37,7 @@ const API = {
   },
   login: async (username: string, password: string) => {
     return axios.post(
-      `${rootUrl}/api/auth/login`,
+      `${rootUrl}/api/login`,
       {
         username: username,
         password: password,
@@ -48,11 +48,11 @@ const API = {
     );
   },
   logout: async () => {
-    const endpoint = `${rootUrl}/api/auth/logout`;
+    const endpoint = `${rootUrl}/api/logout`;
     return await fetch(endpoint);
   },
   verify: async () => {
-    const endpoint = `${rootUrl}/api/auth/check`;
+    const endpoint = `${rootUrl}/api/check`;
     return await fetch(endpoint, {
       credentials: "include",
     });
