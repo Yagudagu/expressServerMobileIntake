@@ -12,7 +12,7 @@ const decodeToken = (header) => {
   console.log("in decodeToken");
   if (header && header.startsWith("Bearer")) {
     token = header.split(" ")[1];
-    console.log(token);
+    //console.log(token);
   }
 
   // Check if not token

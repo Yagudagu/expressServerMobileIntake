@@ -11,6 +11,8 @@ COPY "controllers/." ./controllers
 COPY "frontend/build/." ./frontend/build 
 
 ENV NODE_ENV=production
+ENV JWT_SECRET=this-is-a-secret-that-i-am-using
+ENV JWT_EXPIRES_IN=90d
 
 
 CMD [ "dumb-init", "node", "app.js"]

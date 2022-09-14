@@ -68,7 +68,7 @@ app.delete(
 // Auth Routes
 app.post("/api/newuser", authController.protect, authController.newUser);
 app.post("/api/login", authController.login);
-app.post("/api/verify", authController.checkToken);
+app.post("/api/check", authController.checkToken);
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend/build/index.html"));
