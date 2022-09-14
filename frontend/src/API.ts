@@ -10,7 +10,7 @@ const token = cookies.get("token");
 
 const API = {
   fetchHouseholds: async () => {
-    const endpoint = `${rootUrl}/api/household`;
+    const endpoint = `${rootUrl}/api/allHouseholds`;
     return await (
       await fetch(endpoint, {
         credentials: "include",
@@ -18,7 +18,7 @@ const API = {
     ).json();
   },
   updateHousehold: async (household: HouseholdWith, changes: Object) => {
-    const endpoint = `${rootUrl}/api/household?id=${household._id}`;
+    const endpoint = `${rootUrl}/api/updateHousehold?id=${household._id}`;
 
     return await (
       await fetch(endpoint, {
@@ -29,7 +29,7 @@ const API = {
     ).json();
   },
   deleteHousehold: async (id: string) => {
-    const endpoint = `${rootUrl}/api/household?&id=${id}`;
+    const endpoint = `${rootUrl}/api/deleteHousehold?&id=${id}`;
     return await fetch(endpoint, {
       method: "DELETE",
       credentials: "include",

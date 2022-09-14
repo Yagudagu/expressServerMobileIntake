@@ -55,12 +55,12 @@ app.get(
 );
 app.post("/api/processrequest", householdsController.createHousehold);
 app.patch(
-  "/api/updatehousehold/:id",
+  "/api/updateHousehold/:id",
   authController.protect,
   householdsController.patchHousehold
 );
 app.delete(
-  "/api/deletehousehold/:id",
+  "/api/deleteHousehold/:id",
   authController.protect,
   householdsController.deleteHousehold
 );
