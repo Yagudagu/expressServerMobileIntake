@@ -90,12 +90,12 @@ exports.checkToken = async (req, res) => {
 
 exports.protect = async (req, res, next) => {
   try {
-    console.log(
-      "---------------------------------req info------------------------------"
-    );
-    console.log(req);
+    // console.log(
+    //   "---------------------------------req info------------------------------"
+    // );
+    // console.log(req);
     console.log("-------------------------jwt---------------------------");
-    console.log(req.headers.jwt);
+    console.log(req.headers.cookie);
     // Verify token
     const decoded = await decodeToken(req.headers.jwt);
 
