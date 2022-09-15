@@ -80,7 +80,10 @@ exports.checkToken = async (req, res) => {
   console.log("started checktoken");
   try {
     // Verify token
-    const decoded = await decodeToken(req.headers.authorization);
+
+    const jwt = req.headers.cookie.split(" ")[1];
+    const token = jwt.split("=")[1];
+    const decoded = await decodeToken(token);
     console.log(decoded);
     decoded && res.status(201).json({ message: "Token is valid" });
   } catch (err) {
@@ -90,18 +93,10 @@ exports.checkToken = async (req, res) => {
 
 exports.protect = async (req, res, next) => {
   try {
-    // console.log(
-    //   "---------------------------------req info------------------------------"
-    // );
-    // console.log(req);
-    console.log("-------------------------jwt---------------------------");
-    console.log(req.headers.cookie);
     const jwt = req.headers.cookie.split(" ")[1];
     const token = jwt.split("=")[1];
     // Verify token
     const decoded = await decodeToken(token);
-
-    console.log(decoded);
 
     decoded && next();
   } catch (err) {
