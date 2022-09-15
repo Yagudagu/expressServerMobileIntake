@@ -65,12 +65,10 @@ exports.login = async (req, res, next) => {
 
   res.cookie("jwt", token, {
     expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
-    secure: true,
+    //secure: true,
     httpOnly: true,
-    sameSite: "none",
+    sameSite: "Strict",
   });
-
-  res.cookie("another", "words_and_talking");
 
   res.status(200).json({
     status: "success",

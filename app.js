@@ -5,8 +5,6 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const path = require("path");
 
-//const reactHTML = require("./frontend/build/index");
-
 //Models
 const Household = require("./models/householdModel");
 
