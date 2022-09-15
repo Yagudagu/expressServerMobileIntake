@@ -8,7 +8,7 @@ const signToken = (id) => {
   });
 };
 
-const decodeToken = (header) => {
+const decodeToken = (token) => {
   console.log("in decodeToken");
   // if (header && header.startsWith("Bearer")) {
   //   token = header.split(" ")[1];
