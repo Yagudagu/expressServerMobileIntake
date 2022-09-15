@@ -96,8 +96,10 @@ exports.protect = async (req, res, next) => {
     // console.log(req);
     console.log("-------------------------jwt---------------------------");
     console.log(req.headers.cookie);
+    const jwt = req.headers.cookie.split(" ")[1];
+    const token = jwt.split("=")[1];
     // Verify token
-    const decoded = await decodeToken(req.headers.jwt);
+    const decoded = await decodeToken(token);
 
     console.log(decoded);
 
