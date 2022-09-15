@@ -54,6 +54,7 @@ const API = {
   verify: async () => {
     const endpoint = `${rootUrl}/api/check`;
     return await fetch(endpoint, {
+      method: "POST",
       credentials: "include",
     });
   },
