@@ -71,9 +71,8 @@ const HomePage: React.FC = () => {
       // 1) Submit the order to the api
 
       //var url = "https://us-west2-lithe-transport-338920.cloudfunctions.net/mobile-processor-3";
-      var url =
-        "https://jacobmongo.azurewebsites.net/api/household?code=EFl/qjWJ48nnbZrtrvQPy0n2ZVl8HaxwrL5a1zzCMY5On301PiAHzA==";
-      //var url = "http://127.0.0.1:3333/api/processrequest";
+      //var url = "https://jacobmongo.azurewebsites.net/api/household?code=EFl/qjWJ48nnbZrtrvQPy0n2ZVl8HaxwrL5a1zzCMY5On301PiAHzA==";
+      var url = "http://158.101.21.143:3333/api/processrequest";
 
       const totalPackage = { household, people };
 
