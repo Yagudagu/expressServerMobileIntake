@@ -25,6 +25,9 @@ const API = {
         method: "PATCH",
         credentials: "include",
         body: JSON.stringify(changes),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
       })
     ).json();
   },
