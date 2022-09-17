@@ -92,7 +92,6 @@ const Admin: React.FC<Props> = ({ setLoggedIn }) => {
   };
 
   const handleLogout = () => {
-    cookies.remove("jwt");
     setLoggedIn(false);
     API.logout();
   };

@@ -68,6 +68,7 @@ app.delete(
 app.post("/api/newuser", authController.protect, authController.newUser);
 app.post("/api/login", authController.login);
 app.post("/api/check", authController.checkToken);
+app.get("api/logout", authController.protect, authController.logout);
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend/build/index.html"));

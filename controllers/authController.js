@@ -76,6 +76,19 @@ exports.login = async (req, res, next) => {
   });
 };
 
+exports.logout = async (req, res) => {
+  res.cookie("jwt", "asdfsdfsd", {
+    expires: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000),
+    //secure: true,
+    httpOnly: true,
+    sameSite: "Strict",
+  });
+  res.status(200).json({
+    status: "success",
+    token,
+  });
+};
+
 exports.checkToken = async (req, res) => {
   console.log("started checktoken");
   try {
