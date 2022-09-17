@@ -98,6 +98,8 @@ exports.protect = async (req, res, next) => {
     // Verify token
     const decoded = await decodeToken(token);
 
+    console.log(req.body);
+
     decoded && next();
   } catch (err) {
     res.status(401).json({ message: "Token is not valid" });
