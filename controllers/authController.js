@@ -77,6 +77,7 @@ exports.login = async (req, res, next) => {
 };
 
 exports.logout = async (req, res) => {
+  console.log("got to logout");
   res.cookie("jwt", "asdfsdfsd", {
     expires: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000),
     //secure: true,
