@@ -18,7 +18,7 @@ const API = {
     ).json();
   },
   updateHousehold: async (household: HouseholdWith, changes: Object) => {
-    const endpoint = `${rootUrl}/api/updateHousehold?id=${household._id}`;
+    const endpoint = `${rootUrl}/api/updateHousehold/${household._id}`;
 
     return await (
       await fetch(endpoint, {
@@ -29,7 +29,7 @@ const API = {
     ).json();
   },
   deleteHousehold: async (id: string) => {
-    const endpoint = `${rootUrl}/api/deleteHousehold?&id=${id}`;
+    const endpoint = `${rootUrl}/api/deleteHousehold/${id}`;
     return await fetch(endpoint, {
       method: "DELETE",
       credentials: "include",

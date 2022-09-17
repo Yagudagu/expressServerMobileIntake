@@ -52,6 +52,7 @@ app.get(
   householdsController.getHouseholds
 );
 app.post("/api/processrequest", householdsController.createHousehold);
+
 app.patch(
   "/api/updateHousehold/:id",
   authController.protect,
