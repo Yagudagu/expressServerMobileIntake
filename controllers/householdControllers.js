@@ -17,7 +17,7 @@ exports.getHouseholds = async (req, res) => {
 };
 
 exports.patchHousehold = async (req, res) => {
-  console.log(`${req.params.id} updated to ${req.body}`);
+  console.log(`${req.params.id} updated to ${JSON.stringify(req.body)}`);
 
   const response = await Household.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
