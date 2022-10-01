@@ -129,6 +129,11 @@ input {
   cursor: pointer;
 }
 
+.required-star {
+  color: red;
+  font-size: 2rem;
+}
+
 @media (max-width: 800px) {
   h1 {
     font-size: 2rem;

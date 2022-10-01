@@ -36,6 +36,7 @@ const HomePage: React.FC = () => {
   const [days, setDays] = useState<Day[]>(sampleDays);
   const [household, setHousehold] = useState<Household>(sampleHouseHold);
   const [errorPopup, setErrorPopup] = useState<boolean>(false);
+  const [required, setRequired] = useState<boolean>(false);
 
   const houseInfoRef = useRef<any>();
 
@@ -64,8 +65,14 @@ const HomePage: React.FC = () => {
     const inputs: HTMLInputElement[] = [
       ...houseInfoRef.current.querySelectorAll("input"),
     ];
-    console.log(inputs);
-    const allValid = inputs.every((input: any) => input.reportValidity());
+
+    inputs.forEach((input: HTMLInputElement) =>
+      input.setCustomValidity("Please fill in all the required fields.")
+    );
+
+    const allValid = inputs.every((input: HTMLInputElement) =>
+      input.reportValidity()
+    );
 
     if (allValid) {
       // 1) Submit the order to the api
@@ -75,8 +82,6 @@ const HomePage: React.FC = () => {
       var url = "http://158.101.21.143:3333/api/processrequest";
 
       const totalPackage = { household, people };
-
-      console.log(totalPackage);
 
       axios
         .post(url, totalPackage)
@@ -95,7 +100,10 @@ const HomePage: React.FC = () => {
           console.log(err);
 
           setErrorPopup(true);
+          setRequired(false);
         });
+    } else {
+      setRequired(true);
     }
   };
 
@@ -170,6 +178,8 @@ const HomePage: React.FC = () => {
     handleChecksChange,
     people,
     selectedPersonIndex,
+    required,
+    setRequired,
   };
 
   return (
@@ -181,6 +191,7 @@ const HomePage: React.FC = () => {
           household={household}
           handleHouseHoldChange={handleHouseHoldChange}
           houseInfoRef={houseInfoRef}
+          required={required}
         />
         <AvailableDays t={t} days={days} setDays={setDays} />
         <p>{t("please_add")}</p>
@@ -229,6 +240,8 @@ const HomePage: React.FC = () => {
             people={people}
             selectedPersonIndex={selectedPersonIndex}
             t={t}
+            required={required}
+            setRequired={setRequired}
           />
         )}
         {submittedPopup && (

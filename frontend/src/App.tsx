@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
 import HomePage from "./HomePage";
-import Admin from "./Admin";
 import AdminLogin from "./AdminLogin";
 
 interface Props {}

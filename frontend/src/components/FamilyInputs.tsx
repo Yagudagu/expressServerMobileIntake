@@ -6,12 +6,14 @@ interface Props {
   household: Household;
   handleHouseHoldChange: (changes: any) => void;
   houseInfoRef: any;
+  required: boolean;
 }
 
 const FamilyInputs: React.FC<Props> = ({
   household,
   handleHouseHoldChange,
   houseInfoRef,
+  required,
 }) => {
   return (
     <div
@@ -21,6 +23,7 @@ const FamilyInputs: React.FC<Props> = ({
     >
       <div className="input-container">
         <h2>{t("family_name")}</h2>
+        {required && <div className="required-star">*</div>}
         <input
           type="text"
           id="family-name"
@@ -33,6 +36,7 @@ const FamilyInputs: React.FC<Props> = ({
       </div>
       <div className="input-container">
         <h2>{t("street_address")}</h2>
+        {required && <div className="required-star">*</div>}
         <input
           type="text"
           id="street-address"
@@ -45,6 +49,7 @@ const FamilyInputs: React.FC<Props> = ({
       </div>
       <div className="input-container">
         <h2>{t("zip_code")}</h2>
+        {required && <div className="required-star">*</div>}
         <input
           type="text"
           id="zip-code"
@@ -57,6 +62,7 @@ const FamilyInputs: React.FC<Props> = ({
       </div>
       <div className="input-container">
         <h2>{t("phone_number")}</h2>
+        {required && <div className="required-star">*</div>}
         <input
           type="text"
           id="phone-number"

@@ -11,11 +11,30 @@ interface Props {
   setPopup: React.Dispatch<React.SetStateAction<boolean>>;
   people: People[];
   selectedPersonIndex: number;
+  required: boolean;
+  setRequired: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Popup({ t, setPopup, people, selectedPersonIndex }: Props) {
+function Popup({
+  t,
+  setPopup,
+  people,
+  selectedPersonIndex,
+  required,
+  setRequired,
+}: Props) {
   function returnToMainAndStore() {
+    //Check if it's an man, and if yes make sure both pants are filled
+    if (
+      people[selectedPersonIndex].sex === "male" &&
+      people[selectedPersonIndex].CA === "adult"
+    ) {
+      setRequired(true);
+      return;
+    }
+
     setPopup(false);
+    setRequired(false);
   }
 
   return (
