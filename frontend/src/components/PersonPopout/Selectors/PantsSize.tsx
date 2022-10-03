@@ -3,8 +3,9 @@ import React, { useContext } from "react";
 import pantsMale from "../../../svgs/pants-other.svg";
 import pantsFemale from "../../../svgs/pants-female.svg";
 import pantsChild from "../../../svgs/shorts-pants.svg";
-import pantsTag from "../../../svgs/pants-tag.svg";
 import { ContextMobile } from "../../../HomePage";
+
+const pantsTag = require("../../../svgs/pants-tag.jpg");
 
 const PantsSize = () => {
   const { handlePeopleChange, people, selectedPersonIndex, required } =
