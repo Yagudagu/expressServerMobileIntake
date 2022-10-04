@@ -18,6 +18,9 @@ const Languages = () => (
     <p className="languages-btn" onClick={() => i18next.changeLanguage("ua")}>
       ua
     </p>
+    <p className="languages-btn" onClick={() => i18next.changeLanguage("ru")}>
+      ru
+    </p>
   </div>
 );
 
