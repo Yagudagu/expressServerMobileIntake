@@ -27,7 +27,9 @@ function Popup({
     //Check if it's an man, and if yes make sure both pants are filled
     if (
       people[selectedPersonIndex].sex === "male" &&
-      people[selectedPersonIndex].CA === "adult"
+      people[selectedPersonIndex].CA === "adult" &&
+      (people[selectedPersonIndex].waist === "" ||
+        people[selectedPersonIndex].inseamLength === "")
     ) {
       setRequired(true);
       return;
