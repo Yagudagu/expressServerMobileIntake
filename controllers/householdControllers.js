@@ -1,4 +1,5 @@
 const Household = require("../models/householdModel");
+const { sendEmail } = require("./sendEmail");
 
 // CRUD Functions
 exports.createHousehold = async (req, res) => {
@@ -6,6 +7,7 @@ exports.createHousehold = async (req, res) => {
   const houseHoldWithPeople = { ...req.body.household, people: peopleArray };
 
   const response = await Household.create(houseHoldWithPeople);
+  sendEmail(req);
 
   res.status(200).json({ status: "household created", response });
 };

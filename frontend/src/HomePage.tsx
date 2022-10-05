@@ -66,9 +66,9 @@ const HomePage: React.FC = () => {
       ...houseInfoRef.current.querySelectorAll("input"),
     ];
 
-    inputs.forEach((input: HTMLInputElement) =>
-      input.setCustomValidity("Please fill in all the required fields.")
-    );
+    // inputs.forEach((input: HTMLInputElement) =>
+    //   input.setCustomValidity("Please fill in all the required fields.")
+    // );
 
     const allValid = inputs.every((input: HTMLInputElement) =>
       input.reportValidity()
@@ -77,9 +77,8 @@ const HomePage: React.FC = () => {
     if (allValid) {
       // 1) Submit the order to the api
 
-      //var url = "https://us-west2-lithe-transport-338920.cloudfunctions.net/mobile-processor-3";
-      //var url = "https://jacobmongo.azurewebsites.net/api/household?code=EFl/qjWJ48nnbZrtrvQPy0n2ZVl8HaxwrL5a1zzCMY5On301PiAHzA==";
       var url = "http://158.101.21.143:3333/api/processrequest";
+      //var url = "http://localhost:3333/api/processrequest";
 
       const totalPackage = { household, people };
 
