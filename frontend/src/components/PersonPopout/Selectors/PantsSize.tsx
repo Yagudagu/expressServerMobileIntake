@@ -41,7 +41,7 @@ const PantsSize = () => {
             type="text"
             id="waist-size"
             placeholder={t("waist_size")}
-            value={people[selectedPersonIndex].waistSize}
+            value={people[selectedPersonIndex].waist}
             onChange={(e) =>
               handlePeopleChange({ waist: e.currentTarget.value })
             }
