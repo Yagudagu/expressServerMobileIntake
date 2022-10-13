@@ -74,6 +74,19 @@ const FamilyInputs: React.FC<Props> = ({
         />
       </div>
       <div className="input-container">
+        <h2>{t("email_address")}</h2>
+        {required && <div className="required-star">*</div>}
+        <input
+          type="text"
+          id="email-address"
+          required
+          value={household.emailAddress}
+          onInput={(e: React.FormEvent<HTMLInputElement>) =>
+            handleHouseHoldChange({ emailAddress: e.currentTarget.value })
+          }
+        />
+      </div>
+      <div className="input-container">
         <h2>{t("country_of_origin")}</h2>
         <input
           type="text"

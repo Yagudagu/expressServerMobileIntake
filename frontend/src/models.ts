@@ -25,6 +25,7 @@ export interface Household {
   streetAddress: string;
   zipCode: string;
   phoneNumber: string;
+  emailAddress: string;
   countryOfOrigin: string;
   daysAvailable2: Day[];
 }

@@ -38,6 +38,7 @@ export const sampleHouseHold: Household = {
   streetAddress: "",
   zipCode: "",
   phoneNumber: "",
+  emailAddress: "",
   countryOfOrigin: "",
   daysAvailable2: sampleDays,
 };

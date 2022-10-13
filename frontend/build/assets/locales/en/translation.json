@@ -9,6 +9,7 @@
   "street_address": "Street Address",
   "zip_code": "Zip Code",
   "phone_number": "Phone Number",
+  "email_address": "Email Address",
   "days_times": "Please select what days and the time that you can receive a delivery",
   "day_0": "Monday",
   "day_1": "Tuesday",

@@ -9,6 +9,7 @@
   "street_address": "Adresse postale",
   "zip_code": "Code postal",
   "phone_number": "Numéro de téléphone",
+  "email_address": "Adresse e-mail",
   "days_times": "Veuillez sélectionner les jours et l'heure auxquels vous pouvez recevoir une livraison",
   "day_0": "Lundi",
   "day_1": "Mardi",

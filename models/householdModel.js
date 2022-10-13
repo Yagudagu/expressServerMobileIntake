@@ -5,6 +5,7 @@ const householdSchema = new mongoose.Schema({
   streetAddress: String,
   zipCode: String,
   phoneNumber: String,
+  emailAddress: String,
   countryOfOrigin: String,
   daysAvailable2: [Object],
   people: [
