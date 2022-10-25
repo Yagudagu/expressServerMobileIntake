@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.163be5da.css",
-    "main.js": "/static/js/main.0c1c414f.js",
+    "main.js": "/static/js/main.a7b7189a.js",
     "static/media/pants-tag.jpg": "/static/media/pants-tag.e8c816bf347d52ee3efe.jpg",
     "static/media/pants-female.svg": "/static/media/pants-female.af929fae6795c1a273e57919f6f510ff.svg",
     "static/media/bra.svg": "/static/media/bra.3247cd6aaeaf327a41119744894e04b3.svg",
@@ -11,10 +11,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.163be5da.css.map": "/static/css/main.163be5da.css.map",
-    "main.0c1c414f.js.map": "/static/js/main.0c1c414f.js.map"
+    "main.a7b7189a.js.map": "/static/js/main.a7b7189a.js.map"
   },
   "entrypoints": [
     "static/css/main.163be5da.css",
-    "static/js/main.0c1c414f.js"
+    "static/js/main.a7b7189a.js"
   ]
 }
