@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - "master"
+      - "testing"
 
 jobs:
   docker:
@@ -25,4 +25,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: yagudagu/fullmobile2:latest
+          tags: yagudagu/fullmobile-testing:latest
