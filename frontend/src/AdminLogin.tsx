@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Admin from "./Admin";
-import cookies from "js-cookie";
 
 import API from "./API";
 
@@ -15,10 +14,6 @@ const AdminLogin: React.FC<Props> = (props) => {
     const response = await API.login(e.target[0].value, e.target[1].value);
 
     response.status === 200 && setLoggedIn(true);
-
-    console.log(response);
-
-    //cookies.set("token", response.data.token);
   };
 
   useEffect(() => {

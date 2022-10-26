@@ -1,12 +1,7 @@
 import { HouseholdWith } from "./models";
 import axios from "axios";
-import cookies from "js-cookie";
 
-//const rootUrl = "http://127.0.0.1:3333";
-//const rootUrl = "http://127.0.0.1:7071";
-const rootUrl = "http://158.101.21.143:3333";
-
-const token = cookies.get("token");
+const rootUrl = "http://testing.jacobmartinworld.com";
 
 const API = {
   fetchHouseholds: async () => {
