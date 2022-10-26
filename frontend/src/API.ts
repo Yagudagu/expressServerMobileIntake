@@ -56,6 +56,9 @@ const API = {
       credentials: "include",
     });
   },
+  url: () => {
+    return rootUrl;
+  },
 };
 
 export default API;
