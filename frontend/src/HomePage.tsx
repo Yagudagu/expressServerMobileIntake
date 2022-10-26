@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
     if (allValid) {
       // 1) Submit the order to the api
 
-      var url = API.url();
+      var url = `${API.url()}/api/processrequest`;
 
       const totalPackage = { household, people };
 
