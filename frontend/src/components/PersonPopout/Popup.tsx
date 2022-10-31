@@ -48,6 +48,7 @@ function Popup({
         {people[selectedPersonIndex].CA === "adult" && <Adult />}
         {people[selectedPersonIndex].CA === "child" && <Child />}
 
+        {required && <div className="required">{t("required")}</div>}
         <div className="close-btn" onClick={() => returnToMainAndStore()}>
           {t("add_and_return")}
         </div>
