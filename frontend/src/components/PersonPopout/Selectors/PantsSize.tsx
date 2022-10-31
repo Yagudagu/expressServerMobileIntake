@@ -58,7 +58,11 @@ const PantsSize = () => {
             }
           />
           {required && (
-            <img src={pantsTag} alt="showing where to find pants size" />
+            <img
+              className="pants-tag-photo"
+              src={pantsTag}
+              alt="showing where to find pants size"
+            />
           )}
 
           {/* <input

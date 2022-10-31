@@ -19,6 +19,7 @@ import { sampleDays, sampleHouseHold } from "./initialStates";
 import Popup from "./components/PersonPopout/Popup";
 import SubmittedPopup from "./components/SubmittedPopup";
 import ErrorPopup from "./components/ErrorPopup";
+import API from "./API";
 
 interface AppContextInterface {
   handlePeopleChange: (changes: any) => void;
@@ -77,8 +78,7 @@ const HomePage: React.FC = () => {
     if (allValid) {
       // 1) Submit the order to the api
 
-      var url = "http://158.101.21.143:3333/api/processrequest";
-      //var url = "http://localhost:3333/api/processrequest";
+      var url = `${API.url()}/api/processrequest`;
 
       const totalPackage = { household, people };
 
