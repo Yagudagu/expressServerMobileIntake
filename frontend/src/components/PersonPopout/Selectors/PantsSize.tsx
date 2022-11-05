@@ -8,8 +8,13 @@ import { ContextMobile } from "../../../HomePage";
 const pantsTag = require("../../../svgs/pants-tag.jpg");
 
 const PantsSize = () => {
-  const { handlePeopleChange, people, selectedPersonIndex, required } =
-    useContext<any>(ContextMobile);
+  const {
+    handlePeopleChange,
+    people,
+    selectedPersonIndex,
+    required,
+    manPants,
+  } = useContext<any>(ContextMobile);
 
   if (people[selectedPersonIndex].CA === "child") {
     return (
@@ -35,7 +40,7 @@ const PantsSize = () => {
         <div>{t("pants_size")}</div>
         <div className="clothes-container align-vert">
           <img className="clothes-icons" src={pantsMale} alt="pants" />
-          {required && <div className="required-star">*</div>}
+          {manPants && <div className="required-star">*</div>}
 
           <input
             type="text"
@@ -46,7 +51,7 @@ const PantsSize = () => {
               handlePeopleChange({ waist: e.currentTarget.value })
             }
           />
-          {required && <div className="required-star">*</div>}
+          {manPants && <div className="required-star">*</div>}
 
           <input
             type="text"
@@ -57,14 +62,15 @@ const PantsSize = () => {
               handlePeopleChange({ inseamLength: e.currentTarget.value })
             }
           />
-          {required && (
-            <img
-              className="pants-tag-photo"
-              src={pantsTag}
-              alt="showing where to find pants size"
-            />
-          )}
         </div>
+        {manPants && <div>{t("man-pants")}</div>}
+        {manPants && (
+          <img
+            className="pants-tag-photo"
+            src={pantsTag}
+            alt="showing where to find pants size"
+          />
+        )}
       </div>
     ) : (
       <div className="sections">

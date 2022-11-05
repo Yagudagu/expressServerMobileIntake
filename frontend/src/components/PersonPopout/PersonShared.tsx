@@ -2,6 +2,7 @@ import { t } from "i18next";
 import React, { useContext } from "react";
 import { GiBodyHeight } from "react-icons/gi";
 import { ContextMobile } from "../../HomePage";
+import RequiredStar from "./RequiredStar";
 
 const PersonShared = () => {
   const { handlePeopleChange, people, selectedPersonIndex } =
@@ -10,6 +11,7 @@ const PersonShared = () => {
   return (
     <>
       <div>{t("child_or_adult")}</div>
+      <RequiredStar />
       <label>
         <input
           type="radio"
@@ -34,6 +36,7 @@ const PersonShared = () => {
         <>
           <div className="sections">
             <div>{t("name")}</div>
+            <RequiredStar />
             <input
               type="text"
               id="first-name"
@@ -82,6 +85,7 @@ const PersonShared = () => {
           </div>
           <div className="sections">
             <div>{t("male_or_female_clothing")}</div>
+            <RequiredStar />
             <label>
               <input
                 type="radio"
