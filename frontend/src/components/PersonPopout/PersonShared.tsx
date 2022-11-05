@@ -79,12 +79,6 @@ const PersonShared = () => {
                 }
               />
             </div>
-            {/* <div className="sections">
-  <div className="clothes-container">
-    <div>or</div>
-    <input type="text" id="height-meters" placeholder="meters" />
-  </div>
-</div> */}
           </div>
           <div className="sections">
             <div>{t("male_or_female_clothing")}</div>

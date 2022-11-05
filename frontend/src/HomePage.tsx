@@ -57,10 +57,6 @@ const HomePage: React.FC = () => {
     });
   }, [days]);
 
-  useEffect(() => {
-    console.log(household);
-  }, [household]);
-
   const handleSubmitOrder = () => {
     // Check required fields
     const inputs: HTMLInputElement[] = [

@@ -64,13 +64,6 @@ const PantsSize = () => {
               alt="showing where to find pants size"
             />
           )}
-
-          {/* <input
-                    type="checkbox"
-                    id="pants-dont-need"
-                    className="dont-need-box"
-                  />
-                  Don't Need */}
         </div>
       </div>
     ) : (
@@ -87,12 +80,6 @@ const PantsSize = () => {
             handlePeopleChange({ pantsSize: e.currentTarget.value })
           }
         />
-        {/* <input
-      type="checkbox"
-      id="pants-dont-need"
-      className="dont-need-box"
-    />
-    Don't Need */}
       </div>
     );
   }

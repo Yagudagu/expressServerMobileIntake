@@ -28,8 +28,11 @@ function Popup({
     if (
       people[selectedPersonIndex].sex === "male" &&
       people[selectedPersonIndex].CA === "adult" &&
-      (people[selectedPersonIndex].waist === "" ||
-        people[selectedPersonIndex].inseamLength === "")
+      // This part checks to make sure it's not one empty but the other full
+      ((people[selectedPersonIndex].waist.length === 0 &&
+        people[selectedPersonIndex].inseamLength.length !== 0) ||
+        (people[selectedPersonIndex].waist.length !== 0 &&
+          people[selectedPersonIndex].inseamLength.length === 0))
     ) {
       setRequired(true);
       return;
