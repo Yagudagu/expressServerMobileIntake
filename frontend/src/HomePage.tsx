@@ -38,6 +38,7 @@ const HomePage: React.FC = () => {
   const [household, setHousehold] = useState<Household>(sampleHouseHold);
   const [errorPopup, setErrorPopup] = useState<boolean>(false);
   const [required, setRequired] = useState<boolean>(false);
+  const [manPants, setManPants] = useState<boolean>(false);
 
   const houseInfoRef = useRef<any>();
 
@@ -56,10 +57,6 @@ const HomePage: React.FC = () => {
       return prevState;
     });
   }, [days]);
-
-  useEffect(() => {
-    console.log(household);
-  }, [household]);
 
   const handleSubmitOrder = () => {
     // Check required fields
@@ -179,6 +176,7 @@ const HomePage: React.FC = () => {
     selectedPersonIndex,
     required,
     setRequired,
+    manPants,
   };
 
   return (
@@ -241,6 +239,8 @@ const HomePage: React.FC = () => {
             t={t}
             required={required}
             setRequired={setRequired}
+            setManPants={setManPants}
+            manPants={manPants}
           />
         )}
         {submittedPopup && (

@@ -13,6 +13,8 @@ interface Props {
   selectedPersonIndex: number;
   required: boolean;
   setRequired: React.Dispatch<React.SetStateAction<boolean>>;
+  manPants: boolean;
+  setManPants: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function Popup({
@@ -22,19 +24,34 @@ function Popup({
   selectedPersonIndex,
   required,
   setRequired,
+  manPants,
+  setManPants,
 }: Props) {
   function returnToMainAndStore() {
     //Check if it's an man, and if yes make sure both pants are filled
     if (
       people[selectedPersonIndex].sex === "male" &&
       people[selectedPersonIndex].CA === "adult" &&
-      (people[selectedPersonIndex].waist === "" ||
-        people[selectedPersonIndex].inseamLength === "")
+      // This part checks to make sure it's not one empty but the other full
+      ((people[selectedPersonIndex].waist.length === 0 &&
+        people[selectedPersonIndex].inseamLength.length !== 0) ||
+        (people[selectedPersonIndex].waist.length !== 0 &&
+          people[selectedPersonIndex].inseamLength.length === 0))
+    ) {
+      setManPants(true);
+      return;
+    }
+
+    if (
+      people[selectedPersonIndex].CA.length === 0 ||
+      people[selectedPersonIndex].sex.length === 0 ||
+      people[selectedPersonIndex].firstName.length === 0
     ) {
       setRequired(true);
       return;
     }
 
+    setManPants(false);
     setPopup(false);
     setRequired(false);
   }
@@ -48,7 +65,9 @@ function Popup({
         {people[selectedPersonIndex].CA === "adult" && <Adult />}
         {people[selectedPersonIndex].CA === "child" && <Child />}
 
-        {required && <div className="required">{t("required")}</div>}
+        {(required || manPants) && (
+          <div className="required">{t("required")}</div>
+        )}
         <div className="close-btn" onClick={() => returnToMainAndStore()}>
           {t("add_and_return")}
         </div>

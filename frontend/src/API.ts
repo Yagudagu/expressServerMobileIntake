@@ -1,7 +1,7 @@
 import { HouseholdWith } from "./models";
 import axios from "axios";
 
-const rootUrl = "https://testing.jacobmartinworld.com";
+const rootUrl = "https://jacobmartinworld.com";
 
 const API = {
   fetchHouseholds: async () => {
