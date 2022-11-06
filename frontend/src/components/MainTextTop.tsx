@@ -15,7 +15,6 @@ const MainTextTop: React.FC<Props> = ({ t }: Props) => {
         <a href="mailto: mobileclothes@bmccs.org">{t("send_email")}</a>
         {t("with_name_and_phone")}
       </p>
-      <p>Random test words here</p>
       <p>
         {t("donate_wishlist")}
         <br />
