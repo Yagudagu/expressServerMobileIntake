@@ -87,8 +87,14 @@ const Admin: React.FC<Props> = ({ setLoggedIn }) => {
   };
 
   const handleDelete = (id: string) => {
-    API.deleteHousehold(id);
-    setRepullHouseholds(Math.random().toString());
+    const confirmation = window.confirm(
+      "Are you sure you want to delete this entry?"
+    );
+
+    if (confirmation) {
+      API.deleteHousehold(id);
+      setRepullHouseholds(Math.random().toString());
+    }
   };
 
   const handleLogout = () => {
