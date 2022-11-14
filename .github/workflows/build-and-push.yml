@@ -26,3 +26,4 @@ jobs:
           context: .
           push: true
           tags: yagudagu/fullmobile2:latest
+          build-args: url=https://mobileclothes.org

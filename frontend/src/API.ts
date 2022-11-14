@@ -1,7 +1,7 @@
 import { HouseholdWith } from "./models";
 import axios from "axios";
 
-const rootUrl = "https://mobileclothes.org";
+const rootUrl = process.env.API_URL || "https://mobileclothes.org";
 
 const API = {
   fetchHouseholds: async () => {
