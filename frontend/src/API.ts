@@ -5,7 +5,9 @@ const getUrl = window.location.hostname;
 
 console.log("getURL: " + getUrl);
 
-const rootUrl = getUrl || "https://mobileclothes.org";
+const rootUrl = "";
+
+//getUrl || "https://mobileclothes.org";
 
 console.log("rootURL " + rootUrl);
 
