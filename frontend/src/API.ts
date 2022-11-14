@@ -2,7 +2,12 @@ import { HouseholdWith } from "./models";
 import axios from "axios";
 
 const getUrl = window.location.hostname;
+
+console.log("getURL: " + getUrl);
+
 const rootUrl = getUrl || "https://mobileclothes.org";
+
+console.log("rootURL " + rootUrl);
 
 const API = {
   fetchHouseholds: async () => {
