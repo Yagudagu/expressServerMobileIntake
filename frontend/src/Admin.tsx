@@ -107,6 +107,7 @@ const Admin: React.FC<Props> = ({ setLoggedIn }) => {
     handlePrintOutside,
     handleDelete,
     handlePrint,
+    setShowHousehold,
   };
 
   return (

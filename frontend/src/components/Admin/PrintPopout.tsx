@@ -19,7 +19,7 @@ const PrintPopout: React.FC<Props> = ({
   openHouseholdIndex,
   houseHolds,
 }) => {
-  const { handlePrint } = useContext(ContextAdmin);
+  const { handlePrint, setShowHousehold } = useContext(ContextAdmin);
 
   return (
     <div
@@ -30,7 +30,7 @@ const PrintPopout: React.FC<Props> = ({
         <button onClick={handlePrint} ref={printButtonRef}>
           Print
         </button>
-        <div className="btn" onClick={() => console.log("dicks")}>
+        <div className="btn" onClick={() => setShowHousehold(false)}>
           (x)
         </div>
         <FamilyBox household={houseHolds[openHouseholdIndex]} />
