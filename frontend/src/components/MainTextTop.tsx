@@ -15,10 +15,7 @@ const MainTextTop: React.FC<Props> = ({ t }: Props) => {
         <a href="mailto: mobileclothes@bmccs.org">{t("send_email")}</a>
         {t("with_name_and_phone")}
       </p>
-      <p>
-        Testing build in github actions again, did I finally figure it out?
-        Now's the time!
-      </p>
+
       <p>
         {t("donate_wishlist")}
         <br />
