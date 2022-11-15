@@ -30,6 +30,9 @@ const PrintPopout: React.FC<Props> = ({
         <button onClick={handlePrint} ref={printButtonRef}>
           Print
         </button>
+        <div className="btn" onClick={() => console.log("dicks")}>
+          (x)
+        </div>
         <FamilyBox household={houseHolds[openHouseholdIndex]} />
         {houseHolds[openHouseholdIndex].people.map((person: People) => {
           return <PersonBox key={person.id} person={person} />;
