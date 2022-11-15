@@ -1,5 +1,5 @@
-import { v4 as uuidv4 } from "uuid";
-import { Day, Household, People } from "./models";
+//import { v4 as uuidv4 } from "uuid";
+import { Day, Household } from "./models";
 
 export const sampleDays: Day[] = [
   { checked: false, first: 9, firstAmPm: "AM", second: 6, secondAmPm: "PM" },

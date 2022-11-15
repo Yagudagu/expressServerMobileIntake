@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { People } from "../../models";
 
 import Adult from "./Adult";

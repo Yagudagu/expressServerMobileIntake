@@ -8,13 +8,8 @@ import { ContextMobile } from "../../../HomePage";
 const pantsTag = require("../../../svgs/pants-tag.jpg");
 
 const PantsSize = () => {
-  const {
-    handlePeopleChange,
-    people,
-    selectedPersonIndex,
-    required,
-    manPants,
-  } = useContext<any>(ContextMobile);
+  const { handlePeopleChange, people, selectedPersonIndex, manPants } =
+    useContext<any>(ContextMobile);
 
   if (people[selectedPersonIndex].CA === "child") {
     return (

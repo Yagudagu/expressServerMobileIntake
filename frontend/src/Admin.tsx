@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef, createContext } from "react";
 import { useReactToPrint } from "react-to-print";
-import cookies from "js-cookie";
 
 import API from "./API";
 
