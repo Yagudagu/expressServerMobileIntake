@@ -218,7 +218,7 @@ exports.sendEmail = (req) => {
       margin: 0px;
       width: 250px;
       height: 30px;">${n.braSize}</h3></div>
-      <div class="box-for" style="display: flex; margin: 0px; padding: 0px;"><h3 style="border: black solid 1px;
+      <div class="box-for" style="display: flex; margin: 0px; padding: 0px; height: auto"><h3 style="border: black solid 1px;
       padding: 0px;
       margin: 0px;
       width: 250px;

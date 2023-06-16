@@ -47,12 +47,9 @@
   "shoe_size": "Shoe Size",
   "bra_size": "Bra Size",
   "hat_coat_gloves": "Check if you would like a Hat, Coat, or Gloves?",
-  "hat_swimsuit_sandals": "Check if you would like a Hat, Swimsuit, or Sandals?",
   "hat": "Hat",
   "coat": "Coat",
   "gloves": "Gloves",
-  "swimsuit": "Swimsuit",
-  "sandals": "Sandals",
   "anything_else": "Is there anything else you would like? Are there colors/styles you especially like? You may also request Baby blankets, Dresses, Skirts, Shorts, Sweaters, Pajamas, Maternity, Jackets, Scarves, Boots, Sandals, and Purses.",
   "just_ask": "Just ask!",
   "feet": "Feet",
@@ -70,5 +67,8 @@
   "beth_el_4": "mobileclothes@bmccs.org",
   "required": "Please fill in all the required fields.",
   "man-pants": "Please fill in both  Waist Size and Inseam Length",
-  "socks_and_underwear": "Each person will also receive 3 pairs of socks and underwear!"
+  "socks_and_underwear": "Each person will also receive 3 pairs of socks and underwear!",
+  "hat_swimsuit_sandals": "Check if you would like a Hat, Swimsuit, or Sandals?",
+  "swimsuit": "Swimsuit",
+  "sandals": "Sandals"
 }
