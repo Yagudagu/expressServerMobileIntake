@@ -51,11 +51,11 @@ exports.sendEmail = (req) => {
 
     n.hatCoatGloves.gloves && (n.hcgString += "Gloves: Yes ");
 
-    n.hatCoatGloves.swimsuit && (n.hcgString += "Swimsuit: Yes");
+    n.hatCoatGloves.swimsuit && (n.hcgString += "Swimsuit: Yes ");
 
-    n.hatCoatGloves.sandals && (n.hcgString += "Sandals: Yes");
+    n.hatCoatGloves.sandals && (n.hcgString += "Sandals: Yes ");
 
-    n.hatCoatGloves.summerHat && (n.hcgString += "Summerhat: Yes");
+    n.hatCoatGloves.summerHat && (n.hcgString += "Summerhat: Yes ");
   });
 
   const beforeStuff = "<html>";
@@ -218,16 +218,14 @@ exports.sendEmail = (req) => {
       margin: 0px;
       width: 250px;
       height: 30px;">${n.braSize}</h3></div>
-      <div class="box-for" style="display: flex; margin: 0px; padding: 0px; height: auto"><h3 style="border: black solid 1px;
+      <div class="box-for" style="display: flex; margin: 0px; padding: 0px; height: auto;"><h3 style="border: black solid 1px;
       padding: 0px;
       margin: 0px;
-      width: 250px;
-      height: 30px;">Hat, Cloat, Gloves, Swimsuits, Sandals</h3><h3 style="border: black solid 1px;
+      width: 250px;">Hat, Cloat, Gloves, Swimsuits, Sandals</h3><h3 style="border: black solid 1px;
       padding: 0px;
       margin: 0px;
-      width: 250px;
-      height: 30px;">${n.hcgString}</h3></div>
-      <div class="box-for" style="display: flex; margin: 0px; padding: 0px; height: auto"><h3 style="border: black solid 1px;
+      width: 250px;">${n.hcgString}</h3></div>
+      <div class="box-for" style="display: flex; margin: 0px; padding: 0px; height: auto;"><h3 style="border: black solid 1px;
       padding: 0px;
       margin: 0px;
       width: 250px;">Anything Else</h3><h3 style="border: black solid 1px;
