@@ -45,15 +45,17 @@ exports.sendEmail = (req) => {
 
     n.hcgString = "";
 
-    n.hatCoatGloves.hat
-      ? (n.hcgString = n.hcgString + "Hat: Yes ")
-      : (n.hcgString = n.hcgString + "Hat: No ");
-    n.hatCoatGloves.coat
-      ? (n.hcgString = n.hcgString + "Coat: Yes ")
-      : (n.hcgString = n.hcgString + "Coat: No ");
-    n.hatCoatGloves.gloves
-      ? (n.hcgString = n.hcgString + "Gloves: Yes ")
-      : (n.hcgString = n.hcgString + "Gloves: No ");
+    n.hatCoatGloves.hat && (n.hcgString += "Hat: Yes ");
+
+    n.hatCoatGloves.coat && (n.hcgString += "Coat: Yes ");
+
+    n.hatCoatGloves.gloves && (n.hcgString += "Gloves: Yes ");
+
+    n.hatCoatGloves.swimsuit && (n.hcgString += "Swimsuit: Yes");
+
+    n.hatCoatGloves.sandals && (n.hcgString += "Sandals: Yes");
+
+    n.hatCoatGloves.summerHat && (n.hcgString += "Summerhat: Yes");
   });
 
   const beforeStuff = "<html>";
@@ -220,7 +222,7 @@ exports.sendEmail = (req) => {
       padding: 0px;
       margin: 0px;
       width: 250px;
-      height: 30px;">Hat Cloat and Gloves</h3><h3 style="border: black solid 1px;
+      height: 30px;">Hat, Cloat, Gloves, Swimsuits, Sandals</h3><h3 style="border: black solid 1px;
       padding: 0px;
       margin: 0px;
       width: 250px;

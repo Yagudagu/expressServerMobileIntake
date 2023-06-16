@@ -50,7 +50,7 @@
   "hat": "Chapeau",
   "coat": "Manteau",
   "gloves": "Gants",
-  "anything_else": "Y a-t-il autre chose que vous aimeriez ? Y a-t-il des couleurs/styles que vous aimez particulièrement ? Vous pouvez également demander des couvertures pour bébé, des robes, des jupes, des shorts, des pulls, des pyjamas, des vêtements de maternité, des vestes, des cravates, des écharpes, des bottes, des sandales et des sacs à main.",
+  "anything_else": "Y a-t-il autre chose que vous aimeriez ? Y a-t-il des couleurs/styles que vous aimez particulièrement ? Vous pouvez également demander des couvertures pour bébé, des robes, des jupes, des shorts, des pulls, des pyjamas, des vêtements de maternité, des vestes, des écharpes, des bottes, des sandales et des sacs à main.",
   "just_ask": "Demandez simplement!",
   "feet": "Pieds",
   "inches": "Pouces",
@@ -64,5 +64,6 @@
   "beth_el_1": "Vêtements Mobiles est un ministère de",
   "beth_el_2": " Beth-El Mennonite Church",
   "beth_el_3": ", au service des immigrants à Colorado Springs. N'hésitez pas à nous contacter pour toute question à l'adresse suivante ",
-  "beth_el_4": "mobileclothes@bmccs.org"
+  "beth_el_4": "mobileclothes@bmccs.org",
+  "socks_and_underwear": "Chaque personne recevra également 3 paires de chaussettes et de sous-vêtements !"
 }

@@ -28,7 +28,7 @@ const Adult = () => {
                 <input
                   type="text"
                   id="bra-size"
-                  placeholder="32, 34, 36, 38, 40, 42 (A, B, C, D)"
+                  placeholder="A, B, C, D, Other..."
                   onChange={(e) => {
                     handlePeopleChange({ braSize: e.target.value });
                   }}

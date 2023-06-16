@@ -80,6 +80,16 @@ input {
   margin: 0.5rem 0;
 }
 
+.shirt__size__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list__box {
+  margin-left: 0.8rem;
+}
+
 .btn {
   background-color: rgb(108, 201, 147);
   font-size: 1.5rem;

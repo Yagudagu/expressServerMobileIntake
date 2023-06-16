@@ -12,6 +12,9 @@ export interface People {
     hat: boolean;
     coat: boolean;
     gloves: boolean;
+    swimsuit: boolean;
+    sandals: boolean;
+    summerHat: boolean;
   };
   inseamLength: string;
   waist: string;

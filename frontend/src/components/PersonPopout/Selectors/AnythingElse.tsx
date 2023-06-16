@@ -20,6 +20,7 @@ const AnythingElse = () => {
           handlePeopleChange({ anythingElse: e.currentTarget.value })
         }
       ></textarea>
+      <div>{t("socks_and_underwear")}</div>
     </div>
   );
 };
