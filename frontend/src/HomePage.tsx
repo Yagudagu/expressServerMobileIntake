@@ -27,6 +27,8 @@ interface AppContextInterface {
 
 export const ContextMobile = createContext<AppContextInterface | null>(null);
 
+// adding this random comment for testing
+
 const HomePage: React.FC = () => {
   const { t } = useTranslation("ns1");
   const [popup, setPopup] = useState<boolean>(false);
