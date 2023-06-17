@@ -221,7 +221,7 @@ exports.sendEmail = (req) => {
       <div class="box-for" style="display: flex; margin: 0px; padding: 0px; height: auto;"><h3 style="border: black solid 1px;
       padding: 0px;
       margin: 0px;
-      width: 250px;">Hat, Cloat, Gloves, Swimsuits, Sandals</h3><h3 style="border: black solid 1px;
+      width: 250px;">Hat, Coat, Gloves, Swimsuits, Sandals</h3><h3 style="border: black solid 1px;
       padding: 0px;
       margin: 0px;
       width: 250px;">${n.hcgString}</h3></div>
